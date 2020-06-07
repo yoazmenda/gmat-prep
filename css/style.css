@@ -1,0 +1,65 @@
+body {
+    background-color: beige;
+    background-image: url("../img/background.png");
+}
+
+#app {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    height: 600px;
+}
+
+.container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.container.footer {
+    position: absolute;
+    bottom: 5px;
+}
+
+.navbar {
+    position: relative;
+    background-color: #f5deb391;
+    border-radius: 5px;
+}
+
+.navitem {
+    /* border: tomato 2px solid; */
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 25px;
+    position: relative;
+    bottom: 20px;
+    display: inline;
+    margin: 1%;
+}
+
+.navitem.user {
+    position: absolute;
+    right: 5px;
+    font-size: 15px;
+}
+
+.navitem:hover {
+    cursor: pointer;
+    background-color: tan;
+    border-radius: 5px 5px;
+}
+
+.logo {
+    display: inline;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+#logoImg {
+    width: 100px;
+    height: 100px;
+}
