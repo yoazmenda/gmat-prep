@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        #app {
+            position: relative;
+            background-color: #f5deb326;
+            margin-left: 8%;
+            margin-right: 8%;
+            margin-top: 2%;
+            height: 600px;
+        }
+
+        .container {
+            /* border: solid steelblue 1px; */
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        .container.footer {
+            position: absolute;
+            bottom: 5px;
+        }
+
+        .navbar {
+            position: relative;
+            background-color: wheat;
+        }
+
+        .navitem {
+            /* border: tomato 2px solid; */
+            font-family: 'Balsamiq Sans', cursive;
+            font-size: 25px;
+            position: relative;
+            bottom: 20px;
+            display: inline;
+            margin: 1%;
+        }
+        
+        .navitem.user {
+            position: absolute; right: 5px;
+            font-size: 15px;
+        }
+
+        .navitem:hover {
+            cursor: pointer;
+            background-color: tan;
+            border-radius: 5px 5px;
+        }
+
+        .logo {
+            display: inline;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+        }
+
+        #logoImg {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="app">
+        <div class="container navbar">
+            <div class="logo">
+                <img id="logoImg" src="./img/logo.png">
+            </div>
+            <div class="navitem">
+                About
+            </div>
+            <div class="navitem">
+                Games
+            </div>
+            <div class="navitem">
+                Tools
+            </div>
+            <div class="navitem user">
+                HEllo Guest
+            </div>
+        </div>
+        <div class="container content">
+            welcome to GMAT-PREP.
+            Here you will find games that will help you practice the quantitative part of the GMAT test and go over your
+            basic math skiils
+        </div>
+        <div class="container footer">
+            All right reserved to Yoaz Menda
+        </div>
+
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>
