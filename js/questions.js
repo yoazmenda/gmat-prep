@@ -87,9 +87,11 @@ class Subtraction {
 class Division {
 
     generate() {
-        let a = getRandomInt(2, 20);
-        let b = getRandomInt(2, 20);
-        return { "question": a + " + " + b, "answer": a + b };
+        let a = getRandomInt(2, 13);
+        let b = getRandomInt(2, 13);
+        let larger = Math.max(a, b);
+        let smaller = Math.min(a, b);
+        return { "question": larger * smaller + " / " + smaller, "answer": larger };
     }
 
 }
