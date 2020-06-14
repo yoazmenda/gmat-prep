@@ -1,92 +1,87 @@
 body {
-    color: #faffdf;
-    background-color: beige;
-    background-image: url("../img/background.png");
+    background-color: #4b6966;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
-#app {
+#root {
     position: relative;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 2%;
-    height: 600px;
+    background-color: #2e403e;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 40px auto;
+    height: 400px;
+    width: 600px;
 }
 
-.container.content {
-    font-family: 'Patua One', cursive;
-    padding: 25px;
+#answer {
+    box-sizing: border-box;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    text-align: center;
 }
 
-.container {
-    margin-left: 40px;
-    margin-right: 40px;
+#question {
+    font-size: 50px;
+    text-align: center;
+    box-sizing: border-box;
     margin-top: 5px;
-    padding: 20px;
-}
-
-.container.footer {
     position: absolute;
-    bottom: 5px;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.navbar {
-    position: relative;
-    background-color: #f5deb391;
-    border-radius: 5px;
-}
-
-.navitem {
-    /* border: tomato 2px solid; */
-    font-family: 'Balsamiq Sans', cursive;
-    font-size: 25px;
-    position: relative;
-    bottom: 20px;
-    display: inline;
-    margin: 1%;
-}
-
-.navitem.user {
-    display: none;
+#btn {
+    font-size: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 105px;
     position: absolute;
-    right: 5px;
-    font-size: 15px;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 40px;
 }
 
-.navitem:hover {
-    cursor: pointer;
-    background-color: tan;
-    border-radius: 5px 5px;
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+#timer {
+    font-size: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 40px;
 }
 
-.logo {
-    display: inline;
-}
-
-.logo:hover {
-    cursor: pointer;
-}
-
-#logoImg {
-    width: 100px;
-    height: 100px;
-}
-
-@media only screen and (max-width: 600px) {
-    .navitem:hover {
-        cursor: pointer;
-        background-color: unset;
-        border-radius: unset;
-    }
-    .navbar {
-        height: 28px;
-    }
-    .navitem {
-        display: block;
-        font-size: 20px;
-    }
-    .logo {
-        position: absolute;
-        right: 4px;
-        bottom: -20px;
-    }
+#options {
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 440px;
+    height: 40px;
+    font-size: 16px;
 }
