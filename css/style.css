@@ -101,13 +101,13 @@ button {
         box-sizing: border-box;
         margin: 40px auto;
         height: 550px;
-        width: 350px;
+        width: 340px;
     }
     
     #answer {
         box-sizing: border-box;
         position: absolute;
-        top: 35%;
+        top: 30%;
         left: 50%;
         transform: translateX(-50%);
         width: 200px;
@@ -118,7 +118,7 @@ button {
     }
     
     #question {
-        font-size: 40px;
+        font-size: 26px;
         text-align: center;
         box-sizing: border-box;
         margin-top: 5px;
@@ -134,7 +134,7 @@ button {
         box-sizing: border-box;
         margin-top: 105px;
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
         width: 220px;
@@ -158,7 +158,7 @@ button {
         text-align: center;
         box-sizing: border-box;
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 50%;
         transform: translateX(-50%);
         width: 220px;
@@ -169,11 +169,11 @@ button {
         text-align: center;
         box-sizing: border-box;
         position: absolute;
-        top: 85%;
+        top: 75%;
         left: 50%;
         transform: translateX(-50%);
-        width: 240px;
-        height: 40px;
+        width: 220px;
+        height: 150px;
         font-size: 16px;
     }
 }
