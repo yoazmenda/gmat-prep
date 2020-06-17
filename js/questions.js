@@ -110,6 +110,13 @@ class Fractions {
             { "fraction": "⅐", "question": "?.???", "answer": "0.143" },
             { "fraction": "⅛", "question": "?.???", "answer": "0.125" },
             { "fraction": "⅑", "question": "?.???", "answer": "0.111" },
+            { "fraction": "⅟₁₁", "question": "?.????", "answer": "0.0909" },
+            { "fraction": "⅟₁₂", "question": "?.????", "answer": "0.0833" },
+            { "fraction": "⅟₁₃", "question": "?.????", "answer": "0.0769" },
+            { "fraction": "⅟₁₄", "question": "?.????", "answer": "0.0714" },            
+            { "fraction": "⅟₁₅", "question": "?.????", "answer": "0.0666" },
+            { "fraction": "⅟₁₆", "question": "?.????", "answer": "0.0625" },
+            
         ]
         let fraction = fractions[Math.floor(Math.random() * fractions.length)];
         return { "question": fraction.fraction + " = " + fraction.question, "answer": fraction.answer };

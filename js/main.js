@@ -73,7 +73,7 @@ function handleStart(event) {
 }
 
 function restartTimer() {
-    timerDiv.innerText = "07";
+    timerDiv.innerText = "10";
     startTimer();
 }
 
@@ -125,7 +125,7 @@ function handleReset(event) {
 
     answerDiv.value = "";
     isRunning = false;
-    timerDiv.innerText = "07";
+    timerDiv.innerText = "10";
 }
 
 
