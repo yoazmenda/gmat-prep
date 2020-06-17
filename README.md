@@ -1,3 +1,3 @@
 # GMAT PREP website
 
- https://yoazmenda.github.io/gmat-prep/
+https://gmat.website

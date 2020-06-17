@@ -22,9 +22,13 @@ reset();
 button.addEventListener('click', (event) => {
     if (isRunning == true) {
         button.innerText = "Start";
+        button.classList.add("inactive");
+        button.classList.remove("active");
         handleReset(event);
     } else {
         button.innerText = "Reset";
+        button.classList.add("active");
+        button.classList.remove("inactive");
         handleStart(event);
     }
 })
@@ -118,6 +122,8 @@ function handleReset(event) {
     clearTimeout(currentTimeout);
     doneAudio.play();
     button.innerText = "Start";
+    button.classList.add("inactive");
+    button.classList.remove("active");
     questionDiv.innerHTML = "Press Start";
     scoreSpan.innerText = currentScore;
 

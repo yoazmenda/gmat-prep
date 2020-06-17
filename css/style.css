@@ -9,7 +9,7 @@ body {
     background-color: #2e403e;
     border: 1px solid black;
     box-sizing: border-box;
-    margin: 40px auto;
+    margin: 20px auto;
     height: 400px;
     width: 600px;
 }
@@ -52,8 +52,6 @@ body {
 }
 
 button {
-    background-color: #4CAF50;
-    /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -61,6 +59,15 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.inactive {
+    background-color: #4CAF50;
+}
+
+.active {
+    color: black;
+    background-color: #cacfae;
 }
 
 #timer {
@@ -86,15 +93,6 @@ button {
     font-size: 16px;
 }
 
-#github {
-    text-align: center;
-    box-sizing: border-box;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .checkboxgroup {
     width: 20em;
     overflow: auto;
@@ -110,86 +108,32 @@ button {
     float: right;
 }
 
+.title {
+    text-align: center;
+    padding: 5px;
+}
+
+#title {
+    font-size: large;
+}
+
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: #4b6966;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
     #root {
-        position: relative;
-        background-color: #2e403e;
-        border: 1px solid black;
-        box-sizing: border-box;
         margin: 10px auto;
         height: 550px;
         width: 340px;
     }
     #answer {
-        box-sizing: border-box;
-        position: absolute;
         top: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 200px;
-        height: 40px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 32px;
-        text-align: center;
     }
     #question {
-        font-size: 26px;
-        text-align: center;
-        box-sizing: border-box;
-        margin-top: 5px;
-        position: absolute;
+        font-size: 28px;
         top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
     }
     #btn {
-        font-size: 50px;
-        text-align: center;
-        box-sizing: border-box;
-        margin-top: 105px;
-        position: absolute;
         top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 220px;
-        height: 40px;
-    }
-    button {
-        background-color: #4CAF50;
-        /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
     }
     #timer {
-        font-size: 50px;
-        text-align: center;
-        box-sizing: border-box;
-        position: absolute;
         top: 55%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 220px;
-        height: 40px;
-    }
-    #options {
-        top: 70%;
-    }
-    #github {
-        text-align: center;
-        box-sizing: border-box;
-        position: absolute;
-        top: 95%;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
