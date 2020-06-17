@@ -76,15 +76,38 @@ button {
 }
 
 #options {
-    text-align: center;
-    box-sizing: border-box;
     position: absolute;
-    top: 85%;
+    border: none;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     width: 440px;
-    height: 40px;
+    height: 80px;
     font-size: 16px;
+}
+
+#github {
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.checkboxgroup {
+    width: 20em;
+    overflow: auto;
+}
+
+.checkboxgroup p {
+    width: 7em;
+    text-align: right;
+}
+
+.checkboxgroup label {
+    width: 12em;
+    float: right;
 }
 
 @media only screen and (max-width: 600px) {
@@ -93,17 +116,15 @@ button {
         font-family: Arial, Helvetica, sans-serif;
         color: white;
     }
-    
     #root {
         position: relative;
         background-color: #2e403e;
         border: 1px solid black;
         box-sizing: border-box;
-        margin: 40px auto;
+        margin: 10px auto;
         height: 550px;
         width: 340px;
     }
-    
     #answer {
         box-sizing: border-box;
         position: absolute;
@@ -116,7 +137,6 @@ button {
         font-size: 32px;
         text-align: center;
     }
-    
     #question {
         font-size: 26px;
         text-align: center;
@@ -127,7 +147,6 @@ button {
         left: 50%;
         transform: translateX(-50%);
     }
-    
     #btn {
         font-size: 50px;
         text-align: center;
@@ -140,7 +159,6 @@ button {
         width: 220px;
         height: 40px;
     }
-    
     button {
         background-color: #4CAF50;
         /* Green */
@@ -152,7 +170,6 @@ button {
         display: inline-block;
         font-size: 16px;
     }
-    
     #timer {
         font-size: 50px;
         text-align: center;
@@ -164,16 +181,15 @@ button {
         width: 220px;
         height: 40px;
     }
-    
     #options {
+        top: 70%;
+    }
+    #github {
         text-align: center;
         box-sizing: border-box;
         position: absolute;
-        top: 75%;
+        top: 95%;
         left: 50%;
         transform: translateX(-50%);
-        width: 220px;
-        height: 150px;
-        font-size: 16px;
     }
 }
