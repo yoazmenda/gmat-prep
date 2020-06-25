@@ -34,19 +34,29 @@ button.addEventListener('click', (event) => {
 })
 
 //enter key behavior
-document.addEventListener('keypress', (event) => {
-    if (event.keyCode === 13) {
-        if (isRunning) {
-            event.preventDefault();
-            handleUserAnswer(answerDiv.value);
+answerDiv.addEventListener('keypress', (event) => {
+    if (isRunning) {
+        if (isAnswerKey(event.keyCode)) {
+            setTimeout(function(){handleUserAnswer(answerDiv.value);}, 100);            
         }
     }
 });
 
-
+function isAnswerKey(keyCode) {
+    if (keyCode <= 57 && keyCode >= 48) {
+        //is number
+        return true;
+    }
+    if (keyCode === 110 || keyCode === 190 || keyCode === 46 || keyCode === 1509) {
+        //is period OR decimal point
+        return false;
+    }
+    return false;
+}
 function handleUserAnswer(userAnswerString) {
     if (userAnswerString === currentQuestion.answer.toString()) {
         //right answer
+        clearTimeout(currentTimeout);
         currentScore++;
         scoreSpan.innerText = currentScore;
         successAudio.play()
@@ -54,13 +64,15 @@ function handleUserAnswer(userAnswerString) {
             best = currentScore;
             bestSpan.innerText = best;
         }
-        currentQuestion = Question.generate();
-        questionDiv.innerHTML = currentQuestion.question;
-
-        restartTimer();
-        answerDiv.value = "";
+        questionDiv.innerHTML = "Correct: " + currentQuestion.answer;        
+        setTimeout(() => {
+            currentQuestion = Question.generate();
+            questionDiv.innerHTML = currentQuestion.question;            
+            restartTimer();
+            answerDiv.value = "";
+        }, 700);        
     }
-    
+
 }
 
 function handleStart(event) {
@@ -92,10 +104,10 @@ function startTimer() {
 
     let seconds = parseInt(timerDiv.innerText);
 
-    var timerHandler = function () {
+    var timerHandler = function () {        
         seconds--;
         timerDiv.innerText = pad(seconds, 2);
-        if (seconds > 0) {
+        if (seconds > 0) {            
             scoreSpan.innerText = currentScore;
             clearTimeout(currentTimeout);
             currentTimeout = setTimeout(timerHandler, 1000);
