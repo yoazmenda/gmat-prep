@@ -1,4 +1,3 @@
-
 var questionDiv = document.getElementById("question");
 var answerDiv = document.getElementById("answer");
 var button = document.getElementById("button");
@@ -17,6 +16,37 @@ var successAudio = document.getElementById("successAudio");
 var doneAudio = document.getElementById("doneAudio");
 reset();
 
+window.onload = function() {
+    loadBest();
+}
+
+function loadBest() {
+    best = window.localStorage.getItem("best");
+    let trash = document.getElementById("trash");
+    if (best != null) {
+        // already has best score from previous session        
+        best = parseInt(best);
+        Object.assign(trash.style, {
+            display: "block",
+            cursor: 'pointer'
+        })
+        trash.onclick = function(event) {
+            let answer = confirm("Delete best score?");
+            if (answer == true) {
+                window.localStorage.clear();
+                best = 0;
+                let clearBtn = document.querySelector("#clear");
+                trash.style.display = "none"
+                bestSpan.innerText = best;
+            }
+        }
+    } else {
+        best = 0;
+        let clearBtn = document.querySelector("#clear");
+        trash.style.display = "none"
+    }
+    bestSpan.innerText = best;
+}
 
 //start button behaviour
 button.addEventListener('click', (event) => {
@@ -33,11 +63,10 @@ button.addEventListener('click', (event) => {
     }
 })
 
-//enter key behavior
 answerDiv.addEventListener('keypress', (event) => {
     if (isRunning) {
         if (isAnswerKey(event.keyCode)) {
-            setTimeout(function(){handleUserAnswer(answerDiv.value);}, 100);            
+            setTimeout(function() { handleUserAnswer(answerDiv.value); }, 100);
         }
     }
 });
@@ -53,6 +82,7 @@ function isAnswerKey(keyCode) {
     }
     return false;
 }
+
 function handleUserAnswer(userAnswerString) {
     if (userAnswerString === currentQuestion.answer.toString()) {
         //right answer
@@ -63,14 +93,15 @@ function handleUserAnswer(userAnswerString) {
         if (currentScore > best) {
             best = currentScore;
             bestSpan.innerText = best;
+            window.localStorage.setItem("best", best);
         }
-        questionDiv.innerHTML = "Correct: " + currentQuestion.answer;        
+        questionDiv.innerHTML = "Correct: " + currentQuestion.answer;
         setTimeout(() => {
             currentQuestion = Question.generate();
-            questionDiv.innerHTML = currentQuestion.question;            
+            questionDiv.innerHTML = currentQuestion.question;
             restartTimer();
             answerDiv.value = "";
-        }, 1100);        
+        }, 1100);
     }
 
 }
@@ -104,10 +135,10 @@ function startTimer() {
 
     let seconds = parseInt(timerDiv.innerText);
 
-    var timerHandler = function () {        
+    var timerHandler = function() {
         seconds--;
         timerDiv.innerText = pad(seconds, 2);
-        if (seconds > 0) {            
+        if (seconds > 0) {
             scoreSpan.innerText = currentScore;
             clearTimeout(currentTimeout);
             currentTimeout = setTimeout(timerHandler, 1000);
@@ -145,7 +176,3 @@ function handleReset(event) {
     isRunning = false;
     timerDiv.innerText = "10";
 }
-
-
-
-
