@@ -70,7 +70,7 @@ function handleUserAnswer(userAnswerString) {
             questionDiv.innerHTML = currentQuestion.question;            
             restartTimer();
             answerDiv.value = "";
-        }, 700);        
+        }, 1100);        
     }
 
 }
